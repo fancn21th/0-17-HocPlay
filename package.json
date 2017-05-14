@@ -1,0 +1,30 @@
+{
+  "name": "0-17-HocPlay",
+  "version": "1.0.0",
+  "description": "High Order Component Training",
+  "main": "index.js",
+  "dependencies": {
+    "react": "^15.5.4",
+    "react-dom": "^15.5.4"
+  },
+  "devDependencies": {
+    "react-scripts": "0.9.5"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fancn21th/0-17-HocPlay.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/fancn21th/0-17-HocPlay/issues"
+  },
+  "homepage": "https://github.com/fancn21th/0-17-HocPlay#readme"
+}
