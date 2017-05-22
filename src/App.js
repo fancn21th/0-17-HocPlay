@@ -1,22 +1,26 @@
 import React, { Component } from 'react';
+import { compose, withState } from 'recompose'
 import './App.css';
 
-const hoc = (BaseComponent) => (props) => (
-    <BaseComponent {...props} />
+const overrideProps = (overrideProps) => (BaseComponent) => (props) => (
+    <BaseComponent {...props} {...overrideProps}/>
 )
 
-const NormalComponent = ({ name }) => (
-    <div className="box">
-        {name}
+const NormalComponent = withState('showTitle', 'setTitleVisible', true)(
+    ({ name, showTitle, setTitleVisible }) => (
+    <div className="box" onClick={() => setTitleVisible( x => !x )}>
+        { showTitle && <h5>{name}</h5> }
     </div>
-)
+))
 
-const NormalComponent2 = hoc(NormalComponent)
+const alwaysBob = overrideProps({name: 'Bob'})
+
+const NormalComponent2 = alwaysBob(NormalComponent)
 
 class App extends Component {
   render() {
     const props = {
-        name: 'max'
+        name: 'Max'
     }
     return (
       <div>

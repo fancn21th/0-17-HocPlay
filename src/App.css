@@ -4,4 +4,6 @@
     margin: 5px;
     background-color: aqua;
     display: inline-block;
+    font-size: 20px;
+    font-style: italic;
 }
